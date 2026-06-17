@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var urls = [
+  "https://dxrating.net/songs/%E3%83%9E%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%9E%E3%82%AD%E3%82%B7%E3%83%9E%E3%82%A4%E3%82%B6%E3%83%BC/dx/master",
+  "https://dxrating.net/songs/DROPS%20feat.%20Such/dx/master",
+  "https://dxrating.net/songs/Hyper%20Active/std/expert",
+  "https://dxrating.net/songs/%E3%83%A9%E3%82%B0%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3/dx/master",
+  "https://dxrating.net/songs/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB/dx/remaster",
+  "https://dxrating.net/songs/PERSONA%20feat.%20PANXI/dx/master",
+  "https://dxrating.net/songs/%E3%83%95%E3%82%A9%E3%83%8B%E3%82%A4/dx/remaster",
+  "https://dxrating.net/songs/Freak%20Out%20Hr./dx/master",
+  "https://dxrating.net/songs/%E3%83%95%E3%82%A3%E3%82%AF%E3%82%B5%E3%83%BC/std/master",
+  "https://dxrating.net/songs/%E4%B8%89%E5%A6%96%E7%B2%BESAY%20YA!!!/dx/master",
+  "https://dxrating.net/songs/%E3%83%80%E3%83%B3%E3%82%B9%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%80%E3%83%B3%E3%82%B9/std/master",
+  "https://dxrating.net/songs/%E3%83%8A%E3%82%A4%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%83%8A%E3%82%A4%E3%83%84/std/master",
+  "https://dxrating.net/songs/%E7%A5%9E%E3%81%A3%E3%81%BD%E3%81%84%E3%81%AA/dx/remaster",
+  "https://dxrating.net/songs/%E3%83%99%E3%83%BC%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%84%E3%81%A3%E3%81%A6%E3%82%8B%EF%BC%9F%E7%AC%91/dx/master",
+  "https://dxrating.net/songs/Believe%20the%20Rainbow/std/master",
+  "https://dxrating.net/songs/%E3%82%A6%E3%83%9F%E3%83%A6%E3%83%AA%E6%B5%B7%E5%BA%95%E8%AD%9A/std/master",
+  "https://dxrating.net/songs/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2/dx/remaster",
+  "https://dxrating.net/songs/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%89/dx/master",
+  "https://dxrating.net/songs/%E6%B0%B7%E6%BB%85%E3%81%AE135%E5%B0%8F%E7%AF%80/dx/expert",
+  "https://dxrating.net/songs/%E3%83%92%E3%83%88%E3%82%AC%E3%82%BF/dx/master",
+  "https://dxrating.net/songs/Transcend%20Lights/dx/master",
+  "https://dxrating.net/songs/%E5%AE%99%E5%A4%A9/dx/expert",
+  "https://dxrating.net/songs/Halcyon/dx/master",
+  "https://dxrating.net/songs/%E3%82%B9%E3%82%AB%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E8%AD%A6%E5%AF%9F%E3%81%AE%E3%82%B2%E3%83%83%E3%83%88%E3%83%BC%E3%83%91%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB24%E6%99%82/dx/master",
+  "https://dxrating.net/songs/%E3%83%90%E3%82%AB%E9%80%9A%E4%BF%A1/dx/master",
+  "https://dxrating.net/songs/%E3%82%A8%E3%82%B9%E3%82%AA%E3%83%BC%E3%82%A8%E3%82%B9/dx/master",
+  "https://dxrating.net/songs/BOOM!%20BOOM!!%20BOOM!!!/dx/master",
+  "https://dxrating.net/songs/%E9%9B%A8%E9%9C%B2%E9%9C%9C%E9%9B%AA/dx/expert",
+  "https://dxrating.net/songs/%E3%83%90%E3%83%99%E3%83%AB/dx/master",
+  "https://dxrating.net/songs/You%20Mean%20the%20World%20to%20Me/dx/master",
+  "https://dxrating.net/songs/Ultimate%20taste/dx/master",
+  "https://dxrating.net/songs/MORNINGLOOM/dx/master",
+  "https://dxrating.net/songs/Alice's%20Suitcase/dx/master",
+  "https://dxrating.net/songs/%E3%81%8D%E3%82%85%E3%81%86%E3%81%8F%E3%82%89%E3%82%8A%E3%82%93/dx/master",
+  "https://dxrating.net/songs/%E4%BA%BA%E3%83%9E%E3%83%8B%E3%82%A2/dx/master",
+  "https://dxrating.net/songs/%E3%82%86%E3%81%91%E3%82%80%E3%82%8A%E9%AD%82%E6%B8%A9%E6%B3%89%20II/dx/master",
+  "https://dxrating.net/songs/%E3%83%94%E3%83%9D%E3%83%94%E3%83%9D%20-People%20People-%20feat.%20%E3%81%AA%E3%81%AA%E3%81%B2%E3%82%89/dx/master",
+  "https://dxrating.net/songs/Doll%20Judgment/std/master",
+  "https://dxrating.net/songs/%E3%82%A8%E3%82%B4%E3%83%AD%E3%83%83%E3%82%AF/dx/master",
+  "https://dxrating.net/songs/%E3%81%9A%E3%82%93%E3%81%A0%E3%83%91%E3%83%BC%E3%83%AA%E3%83%8A%E3%82%A4/dx/master",
+  "https://dxrating.net/songs/OMAKENO%20Stroke/dx/master",
+  "https://dxrating.net/songs/Last%20Kingdom/dx/master",
+  "https://dxrating.net/songs/Knight%20Rider/dx/master",
+  "https://dxrating.net/songs/Estahv/dx/master",
+  "https://dxrating.net/songs/Princess%E2%99%82/dx/master",
+  "https://dxrating.net/songs/%E7%97%85%E3%81%BF%E5%9E%A2%E3%82%B9%E3%83%86%E3%83%AD%E3%82%A4%E3%83%89/dx/master",
+  "https://dxrating.net/songs/Last%20Samurai/dx/master",
+  "https://dxrating.net/songs/%E7%86%B1%E7%95%B0%E5%B8%B8/dx/remaster",
+  "https://dxrating.net/songs/INFiNiTE%20ENERZY%20-Overdoze-/dx/master"
+];
+window.location.replace(urls[Math.floor(Math.random() * urls.length)]);
+</script>
+</head>
+<body></body>
+</html>
